@@ -5,7 +5,7 @@ from chat_model import get_chat_response
 from voice_input import speech_to_text
 from voice_output import speak
 
-# ---------- PAGE SETUP ----------
+# PAGE SETUP
 IS_CLOUD = True
 
 st.markdown(
@@ -26,14 +26,14 @@ st.set_page_config(
 st.title("🧠 SuperMind Mental-Health ChatBot 🩺")
 st.caption("A safe space to talk, relax, and feel supported")
 
-# ---------- SESSION STATE ----------
+#SESSION STATE
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "intro_shown" not in st.session_state:
     st.session_state.intro_shown = False
 
-# ---------- INTRO (SHOW ONCE) ----------
+# INTRO
 if not st.session_state.intro_shown:
     intro_text = """
     Hi 👋 I’m **SuperMind**, your Mental Health ChatBot 🩺  
@@ -53,16 +53,16 @@ if not st.session_state.intro_shown:
     })
     st.session_state.intro_shown = True
 
-# ---------- DISPLAY CHAT HISTORY ----------
+#DISPLAY CHAT HISTORY
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ---------- INPUTS ----------
+#INPUTS 
 user_text = st.chat_input("Type your message...")
 audio = st.audio_input("🎤 Speak to SuperMind")
 
-# ---------- HANDLE VOICE INPUT ----------
+# HANDLE VOICE INPUT 
 if audio:
     spoken_text = speech_to_text(audio.read())
     if spoken_text:
@@ -91,7 +91,7 @@ if audio:
             speak(reply)
         #speak(reply)
 
-# ---------- HANDLE TEXT INPUT ----------
+# HANDLE TEXT INPUT 
 if user_text:
     # Display user's text
     with st.chat_message("user"):
@@ -120,6 +120,7 @@ if user_text:
     
     #speak(reply)
 #=======================================================================================================
+
 
 
 
