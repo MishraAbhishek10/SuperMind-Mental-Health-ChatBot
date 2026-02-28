@@ -23,39 +23,41 @@ client = Groq(api_key=API_KEY)
 
 def get_chat_response(message: str, mood: str):
 
-   SYSTEM_PROMPT = f"""
-You are a calm, supportive mental health companion.
+    SYSTEM_PROMPT = f"""
+        You are a calm, supportive mental health companion.
 
-User mood: {mood}
-User message: {message}
+        User mood: {mood}
+        User message: {message}
 
-STRICT RULES (MUST FOLLOW):
-- Be empathetic but concise
-- Do NOT give medical advice
-- Response MUST be under 90 words
-- Use Markdown formatting ONLY
-- DO NOT put multiple bullet points on the same line
+        Rules for your response:
+        - Be empathetic but concise
+        - Do NOT sound like a long essay
+        - Use simple, friendly language
+        - Avoid repeating the same advice every time
+        - Do NOT give medical or clinical advice
+        - Keep the response under 90 words
+        STRICT RULES (MUST FOLLOW):
+        - Be empathetic but concise
+        - Do NOT give medical advice
+        - Response MUST be under 90 words
+        - Use Markdown formatting ONLY
+        - Do NOT put multiple bullet points on the same line
 
-RESPONSE FORMAT (VERY IMPORTANT):
-1. One short empathetic sentence (single line)
-2. A blank line
-3. Exactly 3 or 4 bullet points, EACH on its own line, using "-"
-4. A blank line
-5. End with ONE gentle follow-up question
+        Response structure:
+        1️⃣ One short empathetic sentence (1 line max)
+        2️⃣ 3–4 calming suggestions as bullet points
+        3️⃣ End with ONE gentle follow-up question
 
-EXAMPLE FORMAT (FOLLOW THIS EXACTLY):
+        Example style:
+        "I’m really glad you shared this with me 💙  
+        Here are a few gentle things you could try:
+        • …
+        • …
+        • …
+        What feels easiest for you right now?"
 
-I’m really glad you shared this with me 💙
-
-- Take 3 slow, deep breaths
-- Step outside for a few minutes
-- Drink a glass of water
-- Stretch your shoulders gently
-
-What feels easiest for you right now?
-
-Now respond using the same structure.
-"""
+        Now respond.
+        """
     completion = client.chat.completions.create(
         # model="llama3-70b-8192",
         model="llama-3.1-8b-instant",
@@ -64,6 +66,5 @@ Now respond using the same structure.
             {"role": "user", "content": f"My mood is {mood}. {message}"}
         ]
     )
-
 
     return completion.choices[0].message.content
