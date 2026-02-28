@@ -1,0 +1,6 @@
+streamlit
+groq
+python-dotenv
+speechrecognition
+pyttsx3
+pyaudio
