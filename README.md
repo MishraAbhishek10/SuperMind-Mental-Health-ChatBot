@@ -24,11 +24,6 @@ SuperMind is an **empathetic mental health chatbot** that provides a safe space 
 - Text-to-Speech: pyttsx3
 - Environment Management: .env
 
-## **Demo Screenshot**
-
-![SuperMind Chat Interface](assets/demo_screenshot.png)  
-*Screenshot of SuperMind in action (replace with your screenshot)*
-
 ---
 
 ## **Installation**
