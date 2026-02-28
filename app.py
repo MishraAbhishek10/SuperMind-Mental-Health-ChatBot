@@ -113,11 +113,12 @@ if user_text:
         "content": reply
     })
     
-     if not IS_CLOUD:
+    if not IS_CLOUD:
         speak(reply)
     
     #speak(reply)
 #=======================================================================================================
+
 
 
 
