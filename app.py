@@ -85,7 +85,7 @@ if audio:
             "role": "assistant",
             "content": reply
         })
-         if not IS_CLOUD:
+        if not IS_CLOUD:
             speak(reply)
         #speak(reply)
 
@@ -118,6 +118,7 @@ if user_text:
     
     #speak(reply)
 #=======================================================================================================
+
 
 
 
