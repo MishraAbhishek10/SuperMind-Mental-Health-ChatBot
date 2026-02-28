@@ -51,9 +51,9 @@ def get_chat_response(message: str, mood: str):
         Example style:
         "I’m really glad you shared this with me 💙  
         Here are a few gentle things you could try:
-        • …
-        • …
-        • …
+        • item1
+        • item2
+        • item3
         What feels easiest for you right now?"
 
         Now respond.
@@ -68,3 +68,4 @@ def get_chat_response(message: str, mood: str):
     )
 
     return completion.choices[0].message.content
+
