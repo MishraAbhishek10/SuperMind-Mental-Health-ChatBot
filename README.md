@@ -16,13 +16,13 @@ SuperMind is an **empathetic mental health chatbot** that provides a safe space 
 ---
 
 ##**Tech Stack**
-Tech Stack
-Frontend: Streamlit
-Backend: Python
-LLM: Groq LLaMA 3.1
-Voice Recognition: speech_recognition
-Text-to-Speech: pyttsx3
-Environment Management: .env
+- Tech Stack
+- Frontend: Streamlit
+- Backend: Python
+- LLM: Groq LLaMA 3.1
+- Voice Recognition: speech_recognition
+- Text-to-Speech: pyttsx3
+- Environment Management: .env
 
 ## **Demo Screenshot**
 
