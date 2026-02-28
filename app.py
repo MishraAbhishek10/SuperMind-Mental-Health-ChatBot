@@ -6,6 +6,8 @@ from voice_input import speech_to_text
 from voice_output import speak
 
 # ---------- PAGE SETUP ----------
+IS_CLOUD = True
+
 st.markdown(
     """
     <div style="text-align:center;">
@@ -118,6 +120,7 @@ if user_text:
     
     #speak(reply)
 #=======================================================================================================
+
 
 
 
