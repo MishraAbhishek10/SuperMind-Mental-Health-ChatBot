@@ -15,7 +15,7 @@ SuperMind is an **empathetic mental health chatbot** that provides a safe space 
 
 ---
 
-##**Tech Stack**
+## **Tech Stack**
 - Tech Stack
 - Frontend: Streamlit
 - Backend: Python
