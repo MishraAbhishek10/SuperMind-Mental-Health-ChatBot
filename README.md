@@ -1,4 +1,4 @@
-# 🧠 SuperMind Health ChatBot 🩺
+# 🧠 SuperMind Mental-Health ChatBot 🩺
 
 SuperMind is an **empathetic mental health chatbot** that provides a safe space to talk, relax, and feel supported. It supports **text and voice interaction**, detects your mood, and suggests calming activities to help improve emotional wellbeing.
 
