@@ -31,5 +31,5 @@ SuperMind is an **empathetic mental health chatbot** that provides a safe space 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/<your-username>/supermind-health-chatbot.git
+git clone https://github.com/MishraAbhishek10/supermind-health-chatbot.git
 cd supermind-health-chatbot
